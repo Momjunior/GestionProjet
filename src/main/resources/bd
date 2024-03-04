@@ -1,0 +1,37 @@
+//Connexion en tant que root
+mysql -u root -p
+
+//Création de l'utilisateur admin avec mot de passe passer
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'passer';
+
+//Création de la BD bd_college
+CREATE DATABASE bd_college DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+//Attribution de tous les droits à l'utilisateur admin sur la BD bd_psr
+GRANT ALL ON bd_college.* TO 'admin'@'localhost' IDENTIFIED BY 'passer';
+
+//Choix de la BD
+use bd_gestion_college;
+
+
+INSERT INTO classe values ("1","6e");
+INSERT INTO classe values ("2","5e");
+INSERT INTO classe values ("3","4e");
+INSERT INTO classe values ("4","3e");
+
+INSERT INTO categorie_classe values ("1","A");
+INSERT INTO categorie_classe values ("2","B");
+INSERT INTO categorie_classe values ("3","C");
+INSERT INTO categorie_classe values ("4","D");
+
+INSERT INTO matiere values ("1","Anglais");
+INSERT INTO matiere values ("2","EFS");
+INSERT INTO matiere values ("3","EPS");
+INSERT INTO matiere values ("4","Français");
+INSERT INTO matiere values ("5","Géographie");
+INSERT INTO matiere values ("6","Histoire");
+INSERT INTO matiere values ("7","Maths");
+INSERT INTO matiere values ("8","PC");
+INSERT INTO matiere values ("9","SVT");
+
+
